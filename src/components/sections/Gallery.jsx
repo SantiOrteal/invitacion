@@ -48,7 +48,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
       >
         <div className="text-center px-4">
           <motion.h3 
-            className="font-fancy text-3xl font-light mb-12 text-gray-700"
+            className="font-fancy text-3xl xl:text-5xl font-light mb-12 text-gray-700"
             variants={itemVariants}
             transition={{ duration: 0.6 }}
           >
@@ -74,7 +74,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
               >
                 <img 
                   src={img.src} 
-                  className="w-full h-64 object-cover will-change-transform" 
+                  className={`w-full h-64 object-cover will-change-transform ${img.postion? img.postion : ''}`} 
                   alt={img.alt}
                   loading="lazy"
                 />
@@ -132,7 +132,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
                 <img
                   src={selectedImage.src}
                   alt={selectedImage.alt}
-                  className="w-full h-auto max-h-[80vh] object-cover"
+                  className={`w-full h-auto max-h-[80vh] object-cover ${selectedImage.postion? selectedImage.postion : ''}`}
                 />
                 {/* {selectedImage.alt && (
                   <div className="p-4 bg-white/20 backdrop-blur-sm">

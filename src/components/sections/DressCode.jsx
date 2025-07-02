@@ -4,7 +4,7 @@ import DressCodeSvg from "../../assets/svg/dressCode";
 const DressCode = ( {fadeInUp} ) => {
   return (
             <motion.section 
-              className="py-16 bg-gradient-to-b from-verde-musgo-base to-verde-musgo-iluminado-1"
+              className="py-16 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"
@@ -29,7 +29,7 @@ const DressCode = ( {fadeInUp} ) => {
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                    <DressCodeSvg className="w-40 h-40 mx-auto fill-ocre-oscuro-base fill-verde-musgo-base" /> 
+                    <DressCodeSvg className="w-40 h-40 mx-auto fill-ocre-oscuro-base " /> 
                     <p className="text-2xl xl:text-3xl mb-4 text-ocre-oscuro-base font-semibold">Formal</p>
                     <p className="text-xl xl:text-1xl font-body text-ocre-oscuro-iluminado-2 font-medium bg-marfil-base px-4 py-2 rounded-full border border-ocre-oscuro-base">
                     No Niños

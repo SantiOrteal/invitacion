@@ -45,7 +45,7 @@ export default function WeddingInvitation() {
   };
 
   return (
-    <div className="relative h-screen w-full bg-verde-musgo-iluminado-2">
+    <div className="relative h-screen w-full bg-verde-musgo-oscuro-2">
       <audio ref={audioRef} loop>
         <source src={caballitoMarMusic} type="audio/mpeg" />
       </audio>
@@ -53,7 +53,7 @@ export default function WeddingInvitation() {
       {/* !showInvitation */}
         {!showInvitation && (
           <AnimatePresence  mode="wait">
-            <Bubbles />
+            {/* <Bubbles /> */}
           <motion.div
             className="absolute w-8/9 h-8/9 m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
             initial={{ opacity: 0 }}

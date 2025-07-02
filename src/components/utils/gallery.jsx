@@ -6,7 +6,7 @@ import img5 from "../../assets/images/ps-hands.jpg";
 import img6 from "../../assets/images/ps-lay.jpg";
 import img7 from "../../assets/images/ps-picnick.jpg";
 import img8 from "../../assets/images/ps-roll.jpg";
-import img9 from "../../assets/images/psbody.jpg";
+import img9 from "../../assets/images/ps-wide.jpg";
 
 const gallery = [
         { src: img1, alt: "Galería 1" },
@@ -16,7 +16,7 @@ const gallery = [
         { src: img5, alt: "Galería 5" },
         { src: img6, alt: "Galería 6" },
         { src: img7, alt: "Galería 7" },
-        { src: img9, alt: "Galería 8" },
+        { src: img9, alt: "Galería 8", postion:"object-bottom" },
         { src: img3, alt: "Galería 9" },
     ]
 
