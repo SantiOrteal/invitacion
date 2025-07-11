@@ -1,6 +1,69 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import gallery from "../utils/gallery";
+
+const LazyImage = ({ src, alt, className, position, onClick }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1, rootMargin: '50px' }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleImageLoad = () => {
+    setIsLoaded(true);
+  };
+
+  return (
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {/* Blur placeholder */}
+      <div 
+        className={`absolute inset-0 bg-gray-200 transition-opacity duration-500 ${
+          isLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-300 animate-pulse" />
+        <div className="absolute inset-0 backdrop-blur-sm bg-white/20" />
+      </div>
+
+      {/* Loading spinner */}
+      {isInView && !isLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-8 h-8 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+        </div>
+      )}
+
+      {/* Actual image */}
+      {isInView && (
+        <img
+          src={src}
+          alt={alt}
+          className={`w-full h-64 object-cover transition-opacity duration-500 will-change-transform ${
+            position || ''
+          } ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={handleImageLoad}
+          onClick={onClick}
+          loading="lazy"
+        />
+      )}
+    </div>
+  );
+};
 
 const Gallery = ({ fadeInUp, staggerChildren }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -72,12 +135,14 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
                 whileTap={{ scale: 0.98 }}
                 onClick={() => handleImageClick(img, index)}
               >
-                <img 
-                  src={img.src} 
-                  className={`w-full h-64 object-cover will-change-transform ${img.postion? img.postion : ''}`} 
+                <LazyImage
+                  src={img.src}
                   alt={img.alt}
-                  loading="lazy"
+                  position={img.postion}
+                  className="w-full h-64"
+                  onClick={() => handleImageClick(img, index)}
                 />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
@@ -129,21 +194,14 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
 
               {/* Image */}
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-                <img
+                <ModalImage
                   src={selectedImage.src}
                   alt={selectedImage.alt}
-                  className={`w-full h-auto max-h-[80vh] object-cover ${selectedImage.postion? selectedImage.postion : ''}`}
+                  position={selectedImage.postion}
                 />
-                {/* {selectedImage.alt && (
-                  <div className="p-4 bg-white/20 backdrop-blur-sm">
-                    <p className="text-gray-700 text-center font-medium ">
-                      {selectedImage.alt}
-                    </p>
-                  </div>
-                )} */}
               </div>
 
-              {/* Navigation buttons (if you want to add next/prev functionality) */}
+              {/* Navigation buttons */}
               {gallery.length > 1 && (
                 <>
                   <button
@@ -176,7 +234,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
-                    </button>
+                  </button>
                 </>
               )}
             </motion.div>
@@ -184,6 +242,42 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
         )}
       </AnimatePresence>
     </>
+  );
+};
+
+// Modal Image component with lazy loading
+const ModalImage = ({ src, alt, position }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  return (
+    <div className="relative">
+      {/* Blur placeholder for modal */}
+      <div 
+        className={`absolute inset-0 bg-gray-200 transition-opacity duration-500 ${
+          isLoaded ? 'opacity-0' : 'opacity-100'
+        }`}
+      >
+        <div className="w-full h-80 bg-gradient-to-br from-gray-100 to-gray-300 animate-pulse" />
+        <div className="absolute inset-0 backdrop-blur-sm bg-white/20" />
+      </div>
+
+      {/* Loading spinner for modal */}
+      {!isLoaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-12 h-12 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin" />
+        </div>
+      )}
+
+      {/* Modal image */}
+      <img
+        src={src}
+        alt={alt}
+        className={`w-full h-auto max-h-[80vh] object-cover transition-opacity duration-500 ${
+          position || ''
+        } ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
   );
 };
 

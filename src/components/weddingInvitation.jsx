@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion  } from "framer-motion";
 import EnvelopeAnimation from "./animation/EnvelopeAnimation";
-import WeedingDetial from "./weddingDetail";
+import WeedingDetail from "./weddingDetail";
 import SvgAnimation from "./animation/svgAnimation";
 import caballitoMarMusic from "../assets/music/Caballito de mar - Rodrigo Rojas & Lazcano Malo.mp3";
+import music from "../assets/music/mi-corazon-encantado.mp3";
 import Bubbles from "./animation/Bubbles";
 
 
@@ -16,7 +17,9 @@ export default function WeddingInvitation() {
   const audioRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [showInvitation, setShowInvitation] = useState(false);
-  const [startAnimation, setStartAnimation] = useState(false);
+  const [startAudio, setStartAudio] = useState(false);
+  const [showBubbles, setShowBubbles] = useState(false);
+  const [showWeddingDetail, setShowWeddingDetail] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,21 +36,28 @@ export default function WeddingInvitation() {
 
   useEffect(() => {
     const audio = audioRef.current;
-    if (audio && showInvitation) {
+    if (audio && startAudio) {
       audio.volume = 0.3;
       audio.play().catch(() => {console.log("Audio autoplay prevented")});
     }
-  }, [showInvitation]);
+  }, [startAudio]);
 
-  const handleOpenEnvelope = () => {
-    setStartAnimation(true);
-    setShowInvitation(true);
+    const handleOpenEnvelope = () => {
+    setStartAudio(true);
+    setShowBubbles(true);
+    
+    // Después de 7 segundos, ocultar las burbujas y mostrar el WeddingDetail
+    setTimeout(() => {
+      setShowInvitation(true);
+      setShowBubbles(false);
+      setShowWeddingDetail(true);
+    }, 10000); // 7 segundos
   };
 
   return (
-    <div className="relative h-screen w-full bg-verde-musgo-oscuro-2">
+    <div className="relative h-screen w-full bg-verde-musgo-oscuro-2 bg-textura">
       <audio ref={audioRef} loop>
-        <source src={caballitoMarMusic} type="audio/mpeg" />
+        <source src={music} type="audio/mpeg" />
       </audio>
 
       {/* !showInvitation */}
@@ -118,11 +128,25 @@ export default function WeddingInvitation() {
           </AnimatePresence>
         )}
       
+      {/* Bubbles transition animation */}
+      {showBubbles && (
+        <AnimatePresence mode="wait">
+          <motion.div
+            className="absolute inset-0 z-10"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Bubbles />
+          </motion.div>
+        </AnimatePresence>
+      )}
 
       
-        {showInvitation && (
+        {showInvitation  && (
           <AnimatePresence  mode="wait">
-          <WeedingDetial timeLeft={timeLeft} audioRef={audioRef} />
+          <WeedingDetail timeLeft={timeLeft} audioRef={audioRef} />
           </AnimatePresence>
         )}
       

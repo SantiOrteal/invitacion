@@ -82,6 +82,13 @@
   font-size: calc((var(--body-size-value) - 1) * 1.2vw + 1rem);
   line-height: calc(var(--heading-font-line-height, 1.4em) * (1 + (1 - var(--body-size-value)) / 25));
 }
+/* src/index.css o donde importes tus estilos globales */
+.bg-textura {
+  background-image: url('./assets/images/texture-letter.PNG');
+  background-repeat: repeat;
+  background-size: auto; /* o cover, contain, según lo necesites */
+}
+
 
 }
 

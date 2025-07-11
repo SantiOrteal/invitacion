@@ -91,7 +91,7 @@ const BubbleAnimation = () => {
   return (
     <div className="min-h-screen overflow-hidden relative">
       {/* Background overlay for depth */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" /> */}
 
       {/* Bubbles */}
       <AnimatePresence>
@@ -173,7 +173,7 @@ const BubbleAnimation = () => {
       ))}
 
       {/* Instructions */}
-      <motion.div 
+      {/* <motion.div 
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -182,7 +182,7 @@ const BubbleAnimation = () => {
         <p className="text-white/70 text-center">
           Hover over bubbles to see them grow • Click to pop them
         </p>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

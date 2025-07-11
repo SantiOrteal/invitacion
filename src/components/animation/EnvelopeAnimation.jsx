@@ -1,4 +1,6 @@
+import WaxSeal from '../../assets/svg/wax-seal';
 import { useState, useEffect } from 'react';
+import waximg from '../../assets/images/wax-seal-psbrown.png';
 
 const EnvelopeAnimation = ({ onOpen }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +32,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
   const envelopeHeight = isMobile ? 160 : 200;
   const borderWidth = isMobile ? 120 : 150;
   const borderHeight = isMobile ? 80 : 100;
-  const sealSize = isMobile ? 40 : 50;
+  const sealSize = isMobile ? 70 : 80;
 
   return (
     <div
@@ -50,50 +52,33 @@ const EnvelopeAnimation = ({ onOpen }) => {
         style={{
           width: `${sealSize}px`,
           height: `${sealSize}px`,
-          top: '50%',
+          bottom: '10%',
           left: '50%',
           marginTop: `-${sealSize / 2}px`,
           marginLeft: `-${sealSize / 2}px`,
           fontSize: isMobile ? '10px' : '12px',
-          zIndex: 4,
+          zIndex: 5,
           transform: isOpen ? 'scale(0)' : 'scale(1)',
           transition: 'transform 0.3s ease-in-out',
           transitionDelay: isOpen ? '0s' : '0.8s',
-          background: `radial-gradient(circle at 30% 30%, #dc2626, #991b1b, #7f1d1d)`,
-          borderRadius: '50%',
-          boxShadow: `
-            inset 2px 2px 4px rgba(220, 38, 38, 0.8),
-            inset -2px -2px 4px rgba(127, 29, 29, 0.8),
-            0 3px 8px rgba(0, 0, 0, 0.6),
-            0 1px 3px rgba(0, 0, 0, 0.8)
-          `,
-          border: `2px solid #7f1d1d`,
-          textShadow: `
-            1px 1px 2px rgba(0, 0, 0, 0.8),
-            0 0 4px rgba(127, 29, 29, 0.6)
-          `,
-          letterSpacing: '1px'
         }}
       >
-        <div style={{
-          transform: 'rotate(-5deg)',
-          fontFamily: 'serif',
-          fontWeight: 'bold'
-        }}>
-          PS
-        </div>
+        {/* <WaxSeal /> */}
+        <img src={waximg} alt="Wax Seal" className="w-full h-full" />
       </div>
+
+      <div className="absolute flex items-center justify-center t-[50%] l-[50%] z-4"></div> 
 
       {/* Lid One (top lid when closed) */}
       <div
-        className="absolute top-0 left-0 w-full h-full"
+        className="lid-one absolute top-0 left-0 w-full h-full"
         style={{
           borderRight: `${borderWidth}px solid transparent`,
-          borderBottom: `${borderHeight}px solid transparent`,
+          borderBottom: `${borderHeight+60}px solid transparent`,
           borderLeft: `${borderWidth}px solid transparent`,
-          borderTop: `${borderHeight}px solid #62745c`,
+          borderTop: `${borderHeight+60}px solid #62745c`,
           transformOrigin: 'top',
-          zIndex: 3,
+          zIndex: 4,
           transform: isOpen ? 'rotateX(90deg)' : 'rotateX(0deg)',
           transition: 'transform 0.25s linear',
           transitionDelay: isOpen ? '0s' : '0.75s'
@@ -102,7 +87,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
       {/* Lid Two (back lid when opened) */}
       <div
-        className="absolute top-0 left-0 w-full h-full"
+        className="lid-two absolute top-0 left-0 w-full h-full"
         style={{
           borderRight: `${borderWidth}px solid transparent`,
           borderBottom: `${borderHeight}px solid transparent`,
@@ -118,7 +103,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
       {/* Envelope Body */}
       <div
-        className="absolute top-0 left-0 w-full h-full"
+        className="envelope-body absolute top-0 left-0 w-full h-full"
         style={{
           borderTop: `${borderHeight}px solid transparent`,
           borderRight: `${borderWidth}px solid #abbaa7`,
@@ -130,7 +115,7 @@ const EnvelopeAnimation = ({ onOpen }) => {
 
       {/* Letter */}
       <div
-        className="absolute top-0 w-4/5 h-4/5 bg-white rounded-2xl flex items-center justify-center"
+        className="letter-body absolute top-0 w-4/5 h-4/5 bg-white rounded-2xl flex items-center justify-center"
         style={{
           zIndex: 2,
           transform: isOpen ? `translateY(-${envelopeHeight * 0.25}px)` : 'translateY(0px)',
