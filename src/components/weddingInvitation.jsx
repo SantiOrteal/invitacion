@@ -71,7 +71,7 @@ export default function WeddingInvitation() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="mt-20 mb-15 w-4/5">
+            <div className="mt-6 lg:mt-20 mb-15 w-4/5">
               <motion.div 
                 className="w-full h-[2px] bg-ocre-oscuro-base mb-15"
                 initial={{ y: 0, scaleX: 0 }}
