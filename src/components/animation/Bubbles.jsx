@@ -8,7 +8,10 @@ const BubbleAnimation = () => {
   useEffect(() => {
     const generateBubbles = () => {
       const newBubbles = [];
-      for (let i = 0; i < 50; i++) {
+      const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+      const bubbleCount = isMobile ? 25 : 50;
+
+      for (let i = 0; i < bubbleCount; i++) {
         newBubbles.push({
           id: i,
           x: Math.random() * window.innerWidth,
