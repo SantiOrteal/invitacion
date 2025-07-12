@@ -66,7 +66,7 @@ export default function WeddingInvitation() {
           <AnimatePresence  mode="wait">
             {/* <Bubbles /> */}
           <motion.div
-            className="absolute w-8/9 h-8/9 mx-auto my-10 sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
+            className="absolute w-8/9 h-7/9 sm:h-8/9 mx-auto mt-10 mb-auto sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
