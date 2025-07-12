@@ -102,7 +102,7 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
 
         {/* Footer with decorative elements */}
         <motion.footer 
-          className="py-12 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white text-center"
+          className="py-12 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white text-center bg-textura"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"

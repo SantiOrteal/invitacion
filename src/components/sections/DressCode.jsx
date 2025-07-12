@@ -4,7 +4,7 @@ import DressCodeSvg from "../../assets/svg/dressCode";
 const DressCode = ( {fadeInUp} ) => {
   return (
             <motion.section 
-              className="py-16 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base"
+              className="py-16 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base bg-textura"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"

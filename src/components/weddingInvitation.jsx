@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence, useReducedMotion  } from "framer-motion";
+import { Dot } from "lucide-react";
 import EnvelopeAnimation from "./animation/EnvelopeAnimation";
 import WeedingDetail from "./weddingDetail";
 import SvgAnimation from "./animation/svgAnimation";
@@ -103,7 +104,9 @@ export default function WeddingInvitation() {
                 animate={{ y: 0, opacity: 1 }} 
                 transition={{ delay: 0.3 }}
               >
-                22 / 11 / 2025
+                <span className="flex justify-center items-center" >
+                  22 <Dot /> 11 <Dot /> 2025
+                </span>
               </motion.p>
 
             </div>

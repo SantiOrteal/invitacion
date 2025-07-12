@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
 import { Heart, MapPin, Clock, MapPinned } from "lucide-react";
-import RingsSvg from "../../assets/svg/rings"; 
+import RingsSvg from "../../assets/svg/rings";
+
 
 const Ceremony = ( { fadeInUp } ) => {
   return (
             <motion.section 
-              className="py-16 bg-marfil-iluminado-2 relative overflow-hidden"
+              className="py-16 bg-marfil-iluminado-1 relative overflow-hidden bg-wrap-textura bg-old-letter"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"
@@ -35,7 +36,7 @@ const Ceremony = ( { fadeInUp } ) => {
                 
                 {/* Card */}
                 <motion.div 
-                  className="max-w-md mx-auto bg-gradient-to-br from-oro-viejo-iluminado-2 to-oro-viejo-iluminado-3 rounded-3xl p-8 shadow-xl border border-rose-100"   
+                  className="max-w-md mx-auto bg-gradient-to-br from-oro-viejo-iluminado-2 to-oro-viejo-iluminado-3 rounded-3xl p-8 shadow-xl"   
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}

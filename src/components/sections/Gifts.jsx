@@ -7,7 +7,7 @@ import speiSrc from "../../assets/icons/spei.png";
 const Gifts = ( {fadeInUp, staggerChildren} ) => {
   return (
     <motion.section 
-              className="py-16 bg-white"
+              className="py-16 bg-white bg-letter-textura"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"

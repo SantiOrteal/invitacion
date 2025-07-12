@@ -12,7 +12,7 @@ const WeddingNames = () => {
       >
         {/* Pamela - Top Left */}
         <motion.span 
-          className="absolute top-0 left-0 "
+          className="absolute top-0 left-0 pointer-events-none"
           initial={{ opacity: 0, x: -50, y: -30 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
@@ -22,9 +22,11 @@ const WeddingNames = () => {
         
         {/* & Symbol - Center, Bigger */}
         <motion.span 
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl md:text-9xl  font-light"
-          initial={{ opacity: 0, scale: 0.3, rotate: -180 }}
-          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-8xl md:text-9xl  font-light pointer-events-none"
+          // rotate: -180
+          initial={{ opacity: 0, scale: 0.3 }}
+          // rotate: 0
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.6, duration: 1, type: "spring", bounce: 0.4 }}
           // style={{ fontFamily: "'Dancing Script', cursive" }}
         >
@@ -33,7 +35,7 @@ const WeddingNames = () => {
         
         {/* Santiago - Bottom Right */}
         <motion.span 
-          className="absolute bottom-0 right-0 "
+          className="absolute bottom-0 right-0 pointer-events-none"
           initial={{ opacity: 0, x: 50, y: 30 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           transition={{ delay: 2, duration: 0.8 }}

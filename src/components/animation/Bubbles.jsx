@@ -40,7 +40,7 @@ const BubbleAnimation = () => {
     }),
     animate: (custom) => ({
       x: [custom.x, custom.x + Math.sin(custom.id) * 100, custom.x],
-      y: -100,
+      y: 0,
       scale: [0, 1, 1, 0],
       opacity: [0, 0.8, 0.8, 0],
       transition: {
@@ -150,7 +150,7 @@ const BubbleAnimation = () => {
       </AnimatePresence>
 
       {/* Floating particles for ambiance */}
-      {[...Array(30)].map((_, i) => (
+      {/* {[...Array(30)].map((_, i) => (
         <motion.div
           key={`particle-${i}`}
           className="absolute w-1 h-1 bg-white/30 rounded-full"
@@ -170,7 +170,7 @@ const BubbleAnimation = () => {
             ease: "easeInOut"
           }}
         />
-      ))}
+      ))} */}
 
       {/* Instructions */}
       {/* <motion.div 
