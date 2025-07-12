@@ -2,18 +2,76 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- Essential Mobile Viewport Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+     <!-- iOS Safari specific meta tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-touch-fullscreen" content="yes">
+    
+    <!-- Prevent auto-zoom on iOS -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="address=no">
+    
+    <!-- Android Chrome specific -->
+    <meta name="theme-color" content="#f7f3e9">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Prevent screenshot on iOS -->
+    <meta name="apple-mobile-web-app-title" content="Wedding Invitation">
+    
+    <!-- PWA Meta Tags (Optional but recommended) -->
+    <meta name="application-name" content="Wedding Invitation">
+    <meta name="msapplication-TileColor" content="#f7f3e9">
+    <!-- Prevent zoom on input focus -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
     <link rel="icon" type="image/svg+xml" href="/Invitation-Website/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pamela & Santiago</title>
-    <script type="module" crossorigin src="/Invitation-Website/assets/index-BTiXkH9a.js"></script>
+    <script type="module" crossorigin src="/Invitation-Website/assets/index-BKvzKApt.js"></script>
     <link rel="modulepreload" crossorigin href="/Invitation-Website/assets/framer-motion-4wvXfbj_.js">
-    <link rel="stylesheet" crossorigin href="/Invitation-Website/assets/index-yUbJPbIQ.css">
+    <link rel="stylesheet" crossorigin href="/Invitation-Website/assets/index-BmvtqI8V.css">
   </head>
   <body>
     <div id="root"></div>
+     <script>
+        // Viewport height fix script - runs immediately
+        function setVH() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        
+        setVH();
+        window.addEventListener('resize', setVH);
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setVH, 100);
+        });
+        
+        // Visual Viewport API support
+        if (window.visualViewport) {
+            window.visualViewport.addEventListener('resize', setVH);
+        }
+        
+        // Prevent zoom on double tap
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+        
+        // Prevent scroll bounce
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+    </script>
   </body>
 </html>
