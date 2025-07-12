@@ -66,21 +66,21 @@ export default function WeddingInvitation() {
           <AnimatePresence  mode="wait">
             {/* <Bubbles /> */}
           <motion.div
-            className="absolute w-8/9 h-8/9 m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
+            className="absolute w-8/9 h-7/9 m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="mt-6 lg:mt-20 mb-15 w-4/5">
+            <div className="mt-6 sm:mt-20 mb-10 sm:mb-15 w-4/5">
               <motion.div 
-                className="w-full h-[2px] bg-ocre-oscuro-base mb-15"
+                className="w-full h-[2px] bg-ocre-oscuro-base mb-10 sm:mb-15"
                 initial={{ y: 0, scaleX: 0 }}
                 animate={{ y: 0, scaleX: 1 }}
                 transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}
                 style={{ transformOrigin: "center" }}
               />
               <motion.h1 
-                className="heading-1 font-cursive mb-15 text-color-dark flex flex-col items-center"
+                className="heading-1 font-cursive mb-5 sm:mb-15 text-color-dark flex flex-col items-center"
                 initial={{ y: -30, opacity: 0 }} 
                 animate={{ y: 0, opacity: 1 }} 
                 transition={{ duration: 1 }}
@@ -91,7 +91,7 @@ export default function WeddingInvitation() {
               </motion.h1>
 
               <motion.div 
-                className="w-full h-[2px] bg-ocre-oscuro-base mb-10"
+                className="w-full h-[2px] bg-ocre-oscuro-base mb-5 sm:mb-10"
                 initial={{ y: 0, scaleX: 0 }}
                 animate={{ y: 0, scaleX: 1 }}
                 transition={{ delay: 0.9, duration: 0.8, ease: "easeInOut" }}

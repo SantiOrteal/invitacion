@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const SvgAnimation = () => {
   return (
-    <div className="relative flex justify-center items-center mt-4" style={{ height: '80px', width: '60px' }}>
+    <div className="relative flex justify-center items-center sm:mt-4" style={{ height: '80px', width: '60px' }}>
           {/* First Arrow */}
           <motion.svg
             width="40"
