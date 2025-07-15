@@ -35,44 +35,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Pamela & Santiago</title>
-    <script type="module" crossorigin src="/Invitation-Website/assets/index-ef_CZG5L.js"></script>
+    <script type="module" crossorigin src="/Invitation-Website/assets/index-BpEqVkTj.js"></script>
     <link rel="modulepreload" crossorigin href="/Invitation-Website/assets/framer-motion-4wvXfbj_.js">
-    <link rel="stylesheet" crossorigin href="/Invitation-Website/assets/index-CSe9Jpo_.css">
+    <link rel="stylesheet" crossorigin href="/Invitation-Website/assets/index-s8Aii3Oy.css">
   </head>
   <body>
     <div id="root"></div>
-     <script>
-        // Viewport height fix script - runs immediately
-        function setVH() {
-            const vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-        
-        setVH();
-        window.addEventListener('resize', setVH);
-        window.addEventListener('orientationchange', () => {
-            setTimeout(setVH, 100);
-        });
-        
-        // Visual Viewport API support
-        if (window.visualViewport) {
-            window.visualViewport.addEventListener('resize', setVH);
-        }
-        
-        // Prevent zoom on double tap
-        let lastTouchEnd = 0;
-        document.addEventListener('touchend', function (event) {
-            const now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            }
-            lastTouchEnd = now;
-        }, false);
-        
-        // Prevent scroll bounce
-        document.addEventListener('touchmove', function(e) {
-            e.preventDefault();
-        }, { passive: false });
-    </script>
   </body>
 </html>
