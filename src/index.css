@@ -335,7 +335,7 @@ button:focus-visible {
   height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   /* Prevent scrolling */
-  touch-action: manipulation;
+  /* touch-action: manipulation; */
 }
 
 /* Content wrapper that handles safe areas */
@@ -436,11 +436,11 @@ body {
 
 /* Prevent text selection on touch devices */
 .mobile-viewport-container * {
-  -webkit-touch-callout: none;
+  /* -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; */
   user-select: none;
 }
 
