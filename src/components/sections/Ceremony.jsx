@@ -6,7 +6,7 @@ import RingsSvg from "../../assets/svg/rings";
 const Ceremony = ( { fadeInUp } ) => {
   return (
             <motion.section 
-              className="py-16 bg-marfil-iluminado-1 relative overflow-hidden bg-wrap-textura bg-old-letter"
+              className="py-16 bg-marfil-iluminado-1 relative overflow-hidden bg-old-letter"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"

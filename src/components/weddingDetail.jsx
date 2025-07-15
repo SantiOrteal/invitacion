@@ -11,6 +11,7 @@ import Hotels from "./sections/Hotels";
 import Gifts from "./sections/Gifts";
 import Rsvp from "./sections/Rsvp";
 import Hashtag from "./sections/Hashtag";
+import WeddingItinerary from "./sections/WeddingItinerary";
 
 
 
@@ -81,6 +82,7 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
 
         {/* Ceremony Section */}
         <Ceremony fadeInUp={fadeInUp} staggerChildren={staggerChildren}  />
+        <WeddingItinerary fadeInUp={fadeInUp} staggerChildren={staggerChildren}  />
 
         {/* Dress Code Section */}
         <DressCode fadeInUp={fadeInUp}  />
