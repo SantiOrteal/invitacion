@@ -100,9 +100,9 @@
   }
   /* Add to your CSS file */
   .bg-old-letter {
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><pattern id="oldLetter" patternUnits="userSpaceOnUse" width="120" height="120"><rect width="120" height="120" fill="%23f7f3e9"/><circle cx="20" cy="25" r="1.2" fill="%23e8dcc0" opacity="0.6"/><circle cx="95" cy="40" r="0.8" fill="%23d4c4a0" opacity="0.5"/><circle cx="55" cy="70" r="1.0" fill="%23e0d1b3" opacity="0.4"/><circle cx="85" cy="95" r="1.5" fill="%23dcc7a6" opacity="0.3"/><circle cx="30" cy="90" r="0.6" fill="%23c9b894" opacity="0.7"/><circle cx="70" cy="30" r="0.9" fill="%23e3d4b7" opacity="0.5"/><path d="M0,20 Q30,25 60,20 T120,20" stroke="%23ebe2d0" stroke-width="0.3" fill="none" opacity="0.4"/><path d="M0,50 Q40,45 80,50 T120,50" stroke="%23e8dcc0" stroke-width="0.2" fill="none" opacity="0.3"/><path d="M0,80 Q35,85 70,80 T120,80" stroke="%23d4c4a0" stroke-width="0.25" fill="none" opacity="0.5"/></pattern></defs><rect width="120" height="120" fill="url(%23oldLetter)"/></svg>');
-      background-repeat: repeat;
-  }
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><defs><pattern id="oldLetterPattern" patternUnits="userSpaceOnUse" width="120" height="120"><rect width="120" height="120" fill="%23f7f3e9"/><circle cx="20" cy="25" r="1.2" fill="%23e8dcc0" opacity="0.6"/><circle cx="95" cy="40" r="0.8" fill="%23d4c4a0" opacity="0.5"/><circle cx="55" cy="70" r="1.0" fill="%23e0d1b3" opacity="0.4"/><circle cx="85" cy="95" r="1.5" fill="%23dcc7a6" opacity="0.3"/><circle cx="30" cy="90" r="0.6" fill="%23c9b894" opacity="0.7"/><circle cx="70" cy="30" r="0.9" fill="%23e3d4b7" opacity="0.5"/><path d="M0,20 Q30,25 60,20 T120,20" stroke="%23ebe2d0" stroke-width="0.3" fill="none" opacity="0.4"/><path d="M0,50 Q40,45 80,50 T120,50" stroke="%23e8dcc0" stroke-width="0.2" fill="none" opacity="0.3"/><path d="M0,80 Q35,85 70,80 T120,80" stroke="%23d4c4a0" stroke-width="0.25" fill="none" opacity="0.5"/></pattern></defs><rect width="120" height="120" fill="url(%23oldLetterPattern)"/></svg>');
+    background-repeat: repeat;
+}
 
 }
 
