@@ -4,7 +4,7 @@ import { Clock } from "lucide-react";
 const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
   return (
      <motion.section 
-              className="py-16 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base bg-textura"
+              className="py-32 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base bg-textura min-h-[400px]"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"
@@ -18,14 +18,14 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
                 >
-                  <Clock className="w-6 h-6 text-white" />
-                  <h2 className="text-3xl xl:text-5xl font-fancy font-light text-white">
+                  <Clock className="w-10 h-10 text-white" />
+                  <h2 className="text-5xl xl:text-5xl font-fancy font-light text-white">
                     Faltan
                   </h2>
                 </motion.div>
                 
                 <motion.div 
-                  className="flex gap-6 justify-center text-xl"
+                  className=" mx-auto flex w-5/6  gap-6 justify-center text-xl bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-oro-viejo-base"
                   variants={staggerChildren}
                   initial="initial"
                   whileInView="animate"
@@ -39,7 +39,7 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
                   ].map((item, index) => (
                     <motion.div 
                       key={item.label}
-                      className="flex flex-col items-center bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-oro-viejo-base"
+                      className="flex flex-col items-center"
                       variants={{
                         initial: { opacity: 0, y: 50, scale: 0.8 },
                         animate: { opacity: 1, y: 0, scale: 1 }

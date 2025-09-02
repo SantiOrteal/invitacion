@@ -66,7 +66,7 @@ export default function WeddingInvitation() {
           <AnimatePresence  mode="wait">
             {/* <Bubbles /> */}
           <motion.div
-            className="absolute w-8/9 h-7/9 sm:h-8/9 mx-auto mt-10 mb-auto sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
+            className="absolute m-auto w-8/9 h-7/9 sm:h-8/9 sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -113,7 +113,7 @@ export default function WeddingInvitation() {
 
             {/* envelope animation */}
             <motion.div
-              className=""
+              className="mt-8"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 }}
@@ -124,7 +124,10 @@ export default function WeddingInvitation() {
             {/* Text Animation */}
             {
               !showInvitation &&
-              <SvgAnimation />
+              <>
+                <p className="font-cursive mt-6 text-ocre-oscuro-base font-semibold text-3xl flex flex-col items-center">Toca el Sobre</p> 
+                <SvgAnimation />
+              </>
             }
 
           </motion.div>

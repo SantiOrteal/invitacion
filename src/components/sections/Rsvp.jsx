@@ -4,7 +4,7 @@ import { Users } from "lucide-react";
 const Rsvp = ( {fadeInUp} ) => {
   return (
     <motion.section 
-        className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white bg-textura"
+        className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white bg-textura min-h-[500px] flex items-center justify-center"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"

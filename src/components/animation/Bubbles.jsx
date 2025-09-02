@@ -9,7 +9,7 @@ const BubbleAnimation = () => {
     const generateBubbles = () => {
       const newBubbles = [];
       const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-      const bubbleCount = isMobile ? 25 : 50;
+      const bubbleCount = isMobile ? 35 : 65;
 
       for (let i = 0; i < bubbleCount; i++) {
         newBubbles.push({
@@ -18,7 +18,7 @@ const BubbleAnimation = () => {
           y: Math.random() * window.innerHeight,
           size: Math.random() * 60 + 20,
           color: `hsl(${Math.random() * 360}, 70%, 80%)`,
-          duration: Math.random() * 15 + 10,
+          duration: Math.random() * 8 + 5,
           delay: Math.random() * 5
         });
       }
@@ -84,7 +84,7 @@ const BubbleAnimation = () => {
         y: Math.random() * window.innerHeight,
         size: Math.random() * 60 + 20,
         color: `hsl(${Math.random() * 360}, 70%, 80%)`,
-        duration: Math.random() * 15 + 10,
+        duration: Math.random() * 5 + 3,
         delay: 0
       };
       setBubbles(prev => [...prev, newBubble]);

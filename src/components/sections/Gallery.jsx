@@ -103,7 +103,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
   return (
     <>
       <motion.section 
-        className="py-16 bg-white"
+        className="py-16 bg-marfil-iluminado-1 bg-old-letter"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"

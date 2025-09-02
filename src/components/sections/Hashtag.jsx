@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
+import DecorativeFlorarElements from "../utils/decorativeFlorarElements";
 
 const Hashtag = ( {fadeInUp} ) => {
   return (
     <motion.section 
-        className="py-16 bg-white"
+        className="py-16 bg-white bg-marfil-iluminado-1 bg-old-letter relative min-h-[500px] flex items-center justify-center"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
     >
-        <div className="text-center px-4">
+        <div className="text-center px-4 z-2">
         <motion.h3 
             className="font-fancy text-3xl xl:text-5xl font-light mb-6 text-gray-700"
             initial={{ opacity: 0, y: 30 }}
@@ -35,6 +36,7 @@ const Hashtag = ( {fadeInUp} ) => {
             </p>
         </motion.div>
         </div>
+        <DecorativeFlorarElements />
     </motion.section>
   )
 }
