@@ -25,7 +25,7 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
                 </motion.div>
                 
                 <motion.div 
-                  className=" mx-auto flex w-5/6  gap-6 justify-center text-xl bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-oro-viejo-base"
+                  className=" mx-auto flex w-5/6 md:w-1/3   gap-6 justify-center text-xl bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-oro-viejo-base"
                   variants={staggerChildren}
                   initial="initial"
                   whileInView="animate"

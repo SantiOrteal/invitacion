@@ -12,7 +12,6 @@ import Gifts from "./sections/Gifts";
 import Rsvp from "./sections/Rsvp";
 import Hashtag from "./sections/Hashtag";
 import WeddingItinerary from "./sections/WeddingItinerary";
-import TestWeddingItinerary from "./sections/testItinerary";
 
 
 const WeddingDetail = ({ timeLeft, audioRef }) => {
