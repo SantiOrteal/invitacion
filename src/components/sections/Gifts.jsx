@@ -49,7 +49,7 @@ const Gifts = ( {fadeInUp, staggerChildren} ) => {
               viewport={{ once: true }}
             >
               <Gift className="w-10 h-10 text-verde-musgo-base" />
-              <h3 className="font-fancy text-3xl xl:text-5xl font-light text-verde-musgo-base">
+              <h3 className="font-fancy text-5xl font-light text-verde-musgo-base">
                 Mesa de Regalos
               </h3>
             </motion.div>

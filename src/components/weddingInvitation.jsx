@@ -56,7 +56,7 @@ export default function WeddingInvitation() {
   };
 
   return (
-    <div className="relative h-screen w-full bg-verde-musgo-oscuro-2 bg-textura">
+    <div className="relative h-screen w-full bg-verde-musgo-oscuro-2 bg-textura overflow-x-hidden">
       <audio ref={audioRef} loop>
         <source src={music} type="audio/mpeg" />
       </audio>
@@ -64,14 +64,13 @@ export default function WeddingInvitation() {
       {/* !showInvitation */}
         {!showInvitation && (
           <AnimatePresence  mode="wait">
-            {/* <Bubbles /> */}
           <motion.div
-            className="absolute m-auto w-8/9 h-7/9 sm:h-8/9 sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
+            className="title no-drag min-h-[620px] absolute m-auto w-8/9 h-8/9 sm:m-auto inset-0 flex flex-col justify-center items-center text-center px-4 bg-marfil-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="mt-6 sm:mt-20 mb-10 sm:mb-15 w-4/5">
+            <div className="mt-6 sm:mt-20 mb-1 xs:mb-10 sm:mb-15 w-4/5">
               <motion.div 
                 className="w-full h-[2px] bg-ocre-oscuro-base mb-10 sm:mb-15"
                 initial={{ y: 0, scaleX: 0 }}
@@ -113,7 +112,7 @@ export default function WeddingInvitation() {
 
             {/* envelope animation */}
             <motion.div
-              className="mt-8"
+              className="mt-3 xs:mt-8"
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.9 }}
@@ -125,7 +124,7 @@ export default function WeddingInvitation() {
             {
               !showInvitation &&
               <>
-                <p className="font-cursive mt-6 text-ocre-oscuro-base font-semibold text-3xl flex flex-col items-center">Toca el Sobre</p> 
+                <p className="font-cursive mt-4 xs:mt-6 text-ocre-oscuro-base font-semibold text-3xl flex flex-col items-center">Toca el Sobre</p> 
                 <SvgAnimation />
               </>
             }

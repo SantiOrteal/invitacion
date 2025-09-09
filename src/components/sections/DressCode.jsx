@@ -12,7 +12,7 @@ const DressCode = ( {fadeInUp} ) => {
             >
               <div className="text-center px-4">
                 <motion.h3 
-                  className="text-3xl xl:text-5xl font-light mb-8 text-white"
+                  className="text-5xl font-light mb-8 text-white"
                   style={{ fontFamily: "'Dancing Script', cursive" }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -23,16 +23,31 @@ const DressCode = ( {fadeInUp} ) => {
                 </motion.h3>
                 
                 <motion.div
-                  className="max-w-sm mx-auto bg-marfil-iluminado-1 rounded-3xl p-8 shadow-xl border border-mafia-iluminado-3"
+                  className="max-w-sm mx-auto bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                    <DressCodeSvg className="w-40 h-40 mx-auto fill-ocre-oscuro-base " /> 
-                    <p className="text-2xl xl:text-3xl mb-4 text-ocre-oscuro-base font-semibold">Formal</p>
-                    <p className="text-xl xl:text-1xl font-body text-ocre-oscuro-iluminado-2 font-medium bg-marfil-base px-4 py-2 rounded-full border border-ocre-oscuro-base">
+                    <DressCodeSvg className="w-40 h-40 mx-auto fill-marfil-base" /> 
+                    {/* <p className="text-2xl xl:text-3xl mt-2 mb-4 text-marfil-base font-semibold">Dress Code</p> */}
+                    <p className="font-body text-marfil-base text-sm xl:body-size mt-2 text">
+                      Vestimenta elegante: traje para caballeros y vestido de cóctel o largo para damas.
+                    </p>
+                    {/* <p className="text-xl xl:text-1xl font-body text-ocre-oscuro-iluminado-2 font-medium bg-marfil-base px-4 py-2 rounded-full border border-ocre-oscuro-base">
                     No Niños
+                  </p> */}
+                </motion.div>
+                 {/* Información adicional */}
+                <motion.div 
+                  className="max-w-sm mx-auto mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
+                  viewport={{ once: true }}
+                >
+                  <p className="text-marfil-base text-center text-sm">
+                    Apreciamos que este día sea disfrutado solo por adultos
                   </p>
                 </motion.div>
               </div>

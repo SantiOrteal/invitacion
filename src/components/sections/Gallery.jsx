@@ -111,7 +111,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
       >
         <div className="text-center px-4">
           <motion.h3 
-            className="font-fancy text-3xl xl:text-5xl font-light mb-12 text-gray-700"
+            className="font-fancy text-5xl font-light mb-12 text-gray-700"
             variants={itemVariants}
             transition={{ duration: 0.6 }}
           >

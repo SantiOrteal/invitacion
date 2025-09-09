@@ -12,7 +12,7 @@ const Hashtag = ( {fadeInUp} ) => {
     >
         <div className="text-center px-4 z-2">
         <motion.h3 
-            className="font-fancy text-3xl xl:text-5xl font-light mb-6 text-gray-700"
+            className="font-fancy text-5xl font-light mb-6 text-gray-700"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}

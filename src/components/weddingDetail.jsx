@@ -67,7 +67,7 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
       </motion.button>
 
       <motion.div
-        className="w-full h-full overflow-auto bg-gradient-to-b from-verde-musgo-base to-verde-musgo-ilumniado-1" 
+        className="w-full h-full bg-gradient-to-b from-verde-musgo-base to-verde-musgo-ilumniado-1" 
         initial={{  opacity: 0 }}
         animate={{  opacity: 1 }}
         exit={{ opacity: 0 }}

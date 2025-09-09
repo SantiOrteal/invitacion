@@ -9,7 +9,7 @@ import platos from '../../assets/images/platos.png';
 const WeddingItinerary = ({ variants: fadeInUp }) => {
   return (
     <motion.section 
-      className="min-h-screen bg-marfil-iluminado-1 bg-old-letter flex flex-col justify-center items-center "
+      className="min-h-[700px] bg-marfil-iluminado-1 bg-old-letter flex flex-col justify-center items-center "
       initial="hidden"
       animate="visible"
       variants={{

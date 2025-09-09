@@ -3,6 +3,8 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+
 @theme {
   --font-body: "Raleway", sans-serif;
   --font-fancy: "Dancing Script", cursive;
@@ -58,6 +60,9 @@
   --color-marfil-oscuro-1: oklch(0.89 0.03 85);
   --color-marfil-oscuro-2: oklch(0.82 0.04 85);
   --color-marfil-oscuro-3: oklch(0.80 0.04 85);
+
+  /* Breakpoint XS */
+  --breakpoint-xs: 400px;
 
 }
 
@@ -128,6 +133,13 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Desactivar touch drag en mobile */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gpu-accelerated {
@@ -467,4 +479,15 @@ body {
   align-items: center;
   justify-content: center;
   background: var(--bg-color, #f7f3e9);
+}
+
+/* No Drag */
+.no-drag {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
 }

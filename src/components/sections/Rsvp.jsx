@@ -19,7 +19,7 @@ const Rsvp = ( {fadeInUp} ) => {
             viewport={{ once: true }}
         >
             <Users className="w-6 h-6 text-white" />
-            <h3 className="font-fancy text-3xl xl:text-5xl font-light" >
+            <h3 className="font-fancy text-5xl font-light" >
             Confirmar Asistencia
             </h3>
         </motion.div>
