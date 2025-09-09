@@ -62,7 +62,7 @@ const Hotels = ( {fadeInUp} ) => {
                   viewport={{ once: true }}
                 >
                   <Hotel className="w-10 h-10 text-white" /> 
-                  <h3 className="text-5xl font-light font-fancy text-white" >
+                  <h3 className="text-4xl md:text-5xl font-light font-fancy text-white" >
                     Hoteles con Convenio
                   </h3>
                 </motion.div>

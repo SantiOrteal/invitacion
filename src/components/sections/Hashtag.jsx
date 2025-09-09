@@ -12,7 +12,7 @@ const Hashtag = ( {fadeInUp} ) => {
     >
         <div className="text-center px-4 z-2">
         <motion.h3 
-            className="font-fancy text-5xl font-light mb-6 text-gray-700"
+            className="font-fancy text-4xl md:text-5xl font-light mb-6 text-gray-700"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -22,7 +22,7 @@ const Hashtag = ( {fadeInUp} ) => {
         </motion.h3>
         
         <motion.div
-            className="max-w-2xl mx-auto bg-gradient-to-br from-verde-musgo-base to-verde-musgo-iluminado-1 rounded-3xl p-8 shadow-xl border border-verde-musgo-iluminado-1" 
+            className="max-w-sm mx-auto bg-gradient-to-br from-verde-musgo-base to-verde-musgo-iluminado-1 rounded-3xl p-8 shadow-xl border border-verde-musgo-iluminado-1" 
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

@@ -23,7 +23,7 @@ const DressCode = ( {fadeInUp} ) => {
                 </motion.h3>
                 
                 <motion.div
-                  className="max-w-sm mx-auto bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
+                  className="max-w-md mx-auto bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20"
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.8 }}
