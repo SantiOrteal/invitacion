@@ -62,18 +62,19 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
           </div>
         </div>
 
-        {/* Main content */}
-        <motion.div 
-          className="relative z-10 bg-gradient-to-br from-oro-viejo-iluminado-2 to-oro-viejo-iluminado-3 rounded-3xl p-8 shadow-xl font-body"
-          variants={fadeInUp}
-        >
-          {/* Title */}
+        {/* Title */}
           <motion.h1 
             className="text-5xl font-bold  text-center mb-12 font-fancy"
             variants={fadeInUp}
           >
             Itinerario
           </motion.h1>
+
+        {/* Main content */}
+        <motion.div 
+          className="relative z-10 bg-gradient-to-br from-oro-viejo-iluminado-2 to-oro-viejo-iluminado-3 rounded-3xl p-8 shadow-xl font-body"
+          variants={fadeInUp}
+        >
           
           {/* Timeline */}
           <motion.div 
@@ -226,11 +227,15 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
 
               </motion.div>
             </motion.div>
+            
+            <motion.p className="mt-8 font-light text-lg font-semibold text-verde-musgo-iluminado-1">
+              Lugar: Los membrillos
+            </motion.p>
 
             <motion.a 
               href="https://maps.app.goo.gl/mrkCVyVWhYEbYXoL8" 
               target="_blank"
-              className="mt-10 inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-verde-musgo-iluminado-1 to-verde-musgo-base shadow-lg hover:shadow-xl transition-all duration-300" 
+              className="mt-5 inline-flex items-center gap-2 px-8 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-verde-musgo-iluminado-1 to-verde-musgo-base shadow-lg hover:shadow-xl transition-all duration-300" 
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >

@@ -25,7 +25,7 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
                 </motion.div>
                 
                 <motion.div 
-                  className=" mx-auto flex w-5/6 md:w-1/3   gap-6 justify-center text-xl bg-white rounded-2xl p-4 md:p-6 shadow-lg border border-oro-viejo-base"
+                  className=" mx-auto flex w-5/6 md:w-1/3   gap-6 justify-center text-xl bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 4 md:p-6 shadow-lg "
                   variants={staggerChildren}
                   initial="initial"
                   whileInView="animate"
@@ -47,8 +47,8 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
                       transition={{ duration: 0.6, delay: index * 0.1 }}
                       whileHover={{ scale: 1.05, y: -5 }}
                     >
-                      <span className="text-2xl xl:text-4xl font-bold text-ocre-oscuro-base mb-2">{item.value}</span>
-                      <span className="text-sm text-ocre-oscuro-iluminado-1 font-medium uppercase tracking-wide">{item.label}</span>
+                      <span className="text-2xl xl:text-4xl font-bold text-marfil-base mb-2">{item.value}</span>
+                      <span className="text-sm text-marfil-iluminado-1 font-medium uppercase tracking-wide">{item.label}</span>
                     </motion.div>
                   ))}
                 </motion.div>

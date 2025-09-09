@@ -12,10 +12,10 @@ const Gifts = ( {fadeInUp, staggerChildren} ) => {
 
   const bankData = {
     banco: "Banorte",
-    titular: "Santiago Ortega", // Cambia por el nombre del titular
-    clabe: "072180012345678901", // Cambia por tu CLABE real
+    titular: "Santiago Ortega Alcantara", // Cambia por el nombre del titular
+    clabe: "072078010660181500", // Cambia por tu CLABE real
     cuenta: "1234567890", // Cambia por tu número de cuenta real
-    tarjeta: "4152 3134 5678 9012" // Cambia por tu número de tarjeta real
+    tarjeta: "4189 1431 6090 7245" // Cambia por tu número de tarjeta real
   };
 
   const copyToClipboard = (text, field) => {
@@ -162,7 +162,7 @@ const Gifts = ( {fadeInUp, staggerChildren} ) => {
                   <div className="text-lg font-mono text-gray-900">{bankData.clabe}</div>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-4">
+                {/* <div className="bg-gray-50 rounded-xl p-4">
                   <div className="flex justify-between items-center mb-2">
                     <label className="text-sm font-medium text-gray-600">Número de Cuenta</label>
                     <button
@@ -180,7 +180,7 @@ const Gifts = ( {fadeInUp, staggerChildren} ) => {
                     </button>
                   </div>
                   <div className="text-lg font-mono text-gray-900">{bankData.cuenta}</div>
-                </div>
+                </div> */}
 
                 <div className="bg-gray-50 rounded-xl p-4">
                   <div className="flex justify-between items-center mb-2">
