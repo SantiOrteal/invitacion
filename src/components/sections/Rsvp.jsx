@@ -2,6 +2,11 @@ import { motion } from "framer-motion";
 import { Users } from "lucide-react";
 
 const Rsvp = ( {fadeInUp} ) => {
+
+    const whatsappLink = `https://wa.me/5218446599353?text=${encodeURIComponent(
+        "Confirmar asistencia de [tu nombre]"
+    )}`;
+
   return (
     <motion.section 
         className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white bg-textura min-h-[500px] flex items-center justify-center"
@@ -34,13 +39,16 @@ const Rsvp = ( {fadeInUp} ) => {
             <div className="space-y-4">
             <p className="text-lg xl:text-2xl">Wedding Planner</p>
             {/* <p className="text-white/90">Lugares Asignados: 2 Lugares</p> */}
-            <p className="text-white/90 text-sm xl:body-size">Confirma tu asistencia antes del día 14 | 08 | 2025</p>
+            <p className="text-white/90 text-sm xl:body-size">Confirma tu asistencia antes del día 18 | 10 | 2025</p>
             <motion.button
+                
                 className="px-8 py-4 text-verde-musgo-base font-bold rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 mt-6"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
             >
-                Confirmar Asistencia
+                <a href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer">Confirmar Asistencia</a>
             </motion.button>
             </div>
         </motion.div>

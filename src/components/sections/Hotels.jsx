@@ -275,7 +275,7 @@ const Hotels = ({ fadeInUp }) => {
 
       {/* Información adicional */}
       <motion.div 
-        className="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+        className="mt-12 sm:max-w-sm md:max-w-md xl:max-w-xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
