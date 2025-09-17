@@ -22,7 +22,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         }
       }}
     >
-      <div className="max-w-md w-5/6 relative text-verde-musgo-iluminado-1 ">
+      <div className="max-w-md w-5/6 relative text-verde-musgo-iluminado-1 mb-10 ">
         {/* Background decorative elements */} 
         <div className="absolute inset-0 opacity-10">
           {/* Top left floral corner */}
@@ -64,7 +64,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
 
         {/* Title */}
           <motion.h1 
-            className="text-5xl font-bold  text-center mb-12 font-fancy"
+            className="text-5xl font-bold  text-center mt-5 mb-12 font-fancy"
             variants={fadeInUp}
           >
             Itinerario

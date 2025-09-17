@@ -65,46 +65,24 @@ const StoryTelling = ({ variants: fadeInUp }) => {
         {/* Title */}
 
         <motion.div
-        className="z-10 text-6xl md:text-7xl w-full md:w-5/6 font-bold mb-12 font-cursive"
-        variants={fadeInUp}
+          className="z-10 text-6xl md:text-7xl w-full md:w-5/6 font-bold mb-12 font-cursive"
         >
-        {/* <q className="block"> */}
-            <p className="open-quote w-full text-left ">
-            Y cuando la muerte decida tomar mi mano, prometo sostenerte con la otra,
-            </p>
+            <motion.p className="open-quote w-full text-left"
+            initial={{ opacity: 0, y:-50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}>
+              Y cuando la muerte decida tomar mi mano, prometo sostenerte con la otra,
+            </motion.p>
             <br />
-            <p className="close-quote w-full ml-auto text-right">
-            y encontrarte en cada vida
-            </p>
-        {/* </q> */}
+            <motion.p className="close-quote w-full ml-auto text-right " 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+            viewport={{ once: true }}>
+              y encontrarte en cada vida
+            </motion.p>
         </motion.div>
-
-
-
-        {/* <motion.h1 
-            className="z-10 text-6xl md:text-7xl w-full md:w-3/4 text-left font-bold mb-12 font-cursive"
-            variants={fadeInUp}
-        >
-            <motion.q className=' w-full'> 
-                <p className=''>Y cuando la muerte decida tomar mi mano, prometo  sostenerte con la otra,</p>
-                <br />
-                <p
-                    className=" text-6xl md:text-7xl w-3/4 text-right font-bold  mb-12 font-cursive mr-0 ml-auto "
-                    variants={fadeInUp}
-                >
-                    y encontrarte en cada vida
-                </p>
-            </motion.q>
-        </motion.h1> */}
-
-        {/* <motion.h1 
-            className="text-6xl md:text-7xl w-3/4 text-right font-bold  mb-12 font-cursive mr-0 ml-auto "
-            variants={fadeInUp}
-        >
-            y encontrarte en cada vida
-        </motion.h1> */}
-
-        
         
         {/* Decorative floral elements */}
         <motion.div 

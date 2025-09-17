@@ -52,7 +52,7 @@ export default function WeddingInvitation() {
       setShowInvitation(true);
       setShowBubbles(false);
       setShowWeddingDetail(true);
-    }, 10000); // 7 segundos
+    }, 500); // 7 segundos
   };
 
   return (

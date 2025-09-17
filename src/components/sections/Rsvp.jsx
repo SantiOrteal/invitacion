@@ -9,7 +9,7 @@ const Rsvp = ( {fadeInUp} ) => {
 
   return (
     <motion.section 
-        className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-white bg-textura min-h-[500px] flex items-center justify-center"
+        className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-marfil-base bg-textura min-h-[500px] flex items-center justify-center"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"
@@ -23,7 +23,7 @@ const Rsvp = ( {fadeInUp} ) => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
         >
-            <Users className="w-6 h-6 text-white" />
+            <Users className="w-6 h-6 text-marfil-iluminado-1" />
             <h3 className="font-fancy text-4xl md:text-5xl font-light" >
             Confirmar Asistencia
             </h3>
@@ -37,9 +37,9 @@ const Rsvp = ( {fadeInUp} ) => {
             viewport={{ once: true }}
         >
             <div className="space-y-4">
-            <p className="text-lg xl:text-2xl">Wedding Planner</p>
+            {/* <p className="text-lg xl:text-2xl">Wedding Planner</p> */}
             {/* <p className="text-white/90">Lugares Asignados: 2 Lugares</p> */}
-            <p className="text-white/90 text-sm xl:body-size">Confirma tu asistencia antes del día 18 | 10 | 2025</p>
+            <p className="text-marfil-base body-size">Confirma tu asistencia antes del día 18 | 10 | 2025</p>
             <motion.button
                 
                 className="px-8 py-4 text-verde-musgo-base font-bold rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 mt-6"
