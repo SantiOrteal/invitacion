@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Volume2, VolumeX, Heart } from "lucide-react";
 import Hero from "./sections/hero";
 import Countdown from "./sections/Countdown";
-import Ceremony from "./sections/Ceremony";
+import StoryTelling from "./sections/StoryTelling";
 import DressCode from "./sections/DressCode";
 import Gallery from "./sections/Gallery";
 import Hotels from "./sections/Hotels";
@@ -75,6 +75,8 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
       >
         {/* Hero Cover Section */}
         <Hero />
+        {/* StoryTelling Section */}
+        <StoryTelling fadeInUp={fadeInUp} staggerChildren={staggerChildren}  />
 
         {/* Countdown Section */}
         <Countdown timeLeft={timeLeft} fadeInUp={fadeInUp} staggerChildren={staggerChildren} />

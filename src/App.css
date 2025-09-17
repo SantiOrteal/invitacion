@@ -46,3 +46,116 @@
   transform-style: preserve-3d;
   perspective: 1000px;
 }
+
+.fancy-hr {
+  margin: 2em 0;
+  text-align: center;
+  line-height: 1px;
+  height: 1px;
+  background: #ddd;
+  border: 15px solid #fff;
+  border-left: 0;
+  border-right: 0;
+  font-size: 1.5em;
+}
+
+.fancy-hr::before {
+  position: absolute;
+  content: "";
+  background: transparent;
+  border-spacing: 10px;
+  margin-top: -24px;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  margin-left: 1px;
+  width: 49px;
+  height: 49px;
+  transition: 0.3s ease-out all;
+  border-radius: 100px;
+}
+
+.fancy-hr::after {
+  content: attr(txt);
+  color: #ddd;
+  display: inline;
+  background: #fff;
+  padding: 0.2em 0.5em;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  transition: 0.3s ease all;
+}
+
+hr {
+  height: 1px;
+  background: white;
+  border: none;
+  outline: none;
+  margin: 3em 3em 5em;
+  position: relative;
+  
+  &:before {
+    
+    content: attr(data-symbol);
+    position: absolute;
+    top: 0;
+    background: black;
+    color: white;
+    padding: 0.5em 3em;
+    font-size: 2em; 
+    padding: 0.5em 1em; 
+    font-weight: lighter; 
+    font-family: Helvetica Neue;
+    
+  }
+}
+
+.open-quote{
+  &::before{
+    content: open-quote;
+    font-size: 1.5em;
+    /* font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    display: inline-block;
+    transform: scale(1.5); */
+  }
+}
+
+.close-quote{
+  &::after{
+    content: close-quote;
+    font-size: 1.8em;
+    line-height: 0.1em;
+    vertical-align: -0.2em;
+    /* font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+    display: inline-block;
+    transform: scale(1.5); */
+  }
+}
+
+.quote{
+  &::before{
+    content: open-quote;
+    font-size: 1em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+
+  }
+  
+  &::after{
+    content: close-quote;
+    font-size: 1em;
+    text-align: right;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+}
