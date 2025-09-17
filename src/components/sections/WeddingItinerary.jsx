@@ -6,23 +6,20 @@ import anillos from '../../assets/images/dos-anillos.png';
 import copas from '../../assets/images/dos-copas.png';
 import platos from '../../assets/images/platos.png';
 
-const WeddingItinerary = ({ variants: fadeInUp }) => {
+const WeddingItinerary = ({ fadeInUp }) => {
+
+  const showUpFunction = (delay = 0, duration = 0.8) => ({
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
+    transition: { delay, duration },
+    viewport: { once: true }
+  });
+
   return (
     <motion.section 
       className="min-h-[700px] bg-marfil-iluminado-1 bg-old-letter flex flex-col justify-center items-center "
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            staggerChildren: 0.2
-          }
-        }
-      }}
     >
-      <div className="max-w-md w-5/6 relative text-verde-musgo-iluminado-1 mb-10 ">
+      <motion.div className="max-w-md w-5/6 relative text-verde-musgo-iluminado-1 mb-10 ">
         {/* Background decorative elements */} 
         <div className="absolute inset-0 opacity-10">
           {/* Top left floral corner */}
@@ -66,6 +63,9 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
           <motion.h1 
             className="text-5xl font-bold  text-center mt-5 mb-12 font-fancy"
             variants={fadeInUp}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
           >
             Itinerario
           </motion.h1>
@@ -74,17 +74,18 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         <motion.div 
           className="relative z-10 bg-gradient-to-br from-oro-viejo-iluminado-2 to-oro-viejo-iluminado-3 rounded-3xl p-8 shadow-xl font-body"
           variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
         >
           
           {/* Timeline */}
           <motion.div 
             className="relative"
-            variants={fadeInUp}
           >
             {/* Central line */}
             <motion.div 
               className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-verde-musgo-base transform -translate-x-1/2"
-              variants={fadeInUp}
             />
             
             {/* Timeline items */}
@@ -92,15 +93,16 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
               {/* Religious ceremony */}
               <motion.div 
                 className="flex items-center"
-                variants={fadeInUp}
               >
                 <div className="w-1/2 pr-8 text-right">
                   {/* Church icon */}
                   <motion.div 
                     className="flex justify-end mb-2"
-                    variants={fadeInUp}
-                  >
-                    <img src={arco} className="w-20 h-20 text-verde-musgo-base" alt="church" /> 
+                    >
+                    <motion.img src={arco} className="w-20 h-20 text-verde-musgo-base" alt="church" 
+                    {...showUpFunction(0, 0.8)}
+      
+                    /> 
                     {/* <svg className="w-12 h-12 text-verde-musgo-base" viewBox="0 0 100 100" fill="currentColor">
                       <path d="M20 80 L20 50 L30 40 L30 20 L32 20 L32 15 L34 15 L34 20 L36 20 L36 40 L46 50 L46 80 Z"/>
                       <path d="M54 80 L54 50 L80 50 L80 80 Z"/>
@@ -114,39 +116,41 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
                 
                 <motion.div 
                   className="w-3 h-3 bg-verde-musgo-base rounded-full relative z-10 border-2 border-amber-50"
-                  variants={fadeInUp}
+                  
                 ></motion.div>
                 
-                <div className="w-1/2 pl-8">
-                  <div className="text-2xl font-bold  mb-1">6.00 P.M.</div>
-                  <div className="text-lg font-semibold">Ceremonia</div>
-                  <div className="text-lg font-semibold">religiosa</div>
-                </div>
+                <motion.div className="w-1/2 pl-8"
+                  {...showUpFunction(0, 0.8)}
+                >
+                  <div className="text-2xl text-center font-bold  mb-1">6.00 p.m.</div>
+                  <div className="text-lg text-center font-semibold">Ceremonia</div>
+                  <div className="text-lg text-center font-semibold">religiosa</div>
+                </motion.div>
               </motion.div >
             </div>
               
               {/* Cocktail */}
               <motion.div 
                 className="flex items-center"
-                variants={fadeInUp}
+                
               >
-                <div className="w-1/2 pr-8 text-right">
-                  <div className="text-2xl font-bold  mb-1">7.00 P.M</div>
-                  <div className="text-lg  font-semibold">Cóctel</div>
-                </div>
+                <motion.div className="w-1/2 pr-8 text-right" {...showUpFunction(0, 0.8)}>
+                  <div className="text-2xl text-center font-bold  mb-1">7.00 p.m</div>
+                  <div className="text-lg text-center font-semibold">Cóctel</div>
+                </motion.div>
                 
                 <motion.div 
                   className="w-3 h-3 bg-verde-musgo-base rounded-full relative z-10 border-2 border-amber-50"
-                  variants={fadeInUp}
+                  
                 />
                 
                 <div className="w-1/2 pl-8">
                   {/* Champagne glasses icon */}
                   <motion.div 
                     className="flex justify-start mb-2"
-                    variants={fadeInUp}
+                    
                   >
-                    <img src={copas} className="w-20 h-20 text-verde-musgo-base" alt="copas" />
+                    <motion.img src={copas} className="w-20 h-20 text-verde-musgo-base" alt="copas" {...showUpFunction(0, 0.8)} />
                     {/* <svg className="w-12 h-12 text-verde-musgo-base" viewBox="0 0 100 100" fill="currentColor">
                       <path d="M30 60 L35 40 L45 40 L50 60 L50 70 L48 70 L48 80 L52 80 L52 85 L28 85 L28 80 L32 80 L32 70 L30 70 Z"/>
                       <path d="M50 60 L55 40 L65 40 L70 60 L70 70 L68 70 L68 80 L72 80 L72 85 L48 85 L48 80 L52 80 L52 70 L50 70 Z"/>
@@ -162,15 +166,15 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
               {/* Civil ceremony */}
               <motion.div 
                 className="flex items-center"
-                variants={fadeInUp}
+                
               >
                 <div className="w-1/2 pr-8 text-right">
                   {/* Rings icon */}
                   <motion.div 
                     className="flex justify-end mb-2"
-                    variants={fadeInUp}
+                    
                   >
-                    <img src={anillos} className="w-20 h-20 text-verde-musgo-base" alt="anillos" /> 
+                    <motion.img src={anillos} className="w-20 h-20 text-verde-musgo-base" alt="anillos" {...showUpFunction(0, 0.8)} /> 
                     {/* <svg className="w-12 h-12 text-musgo-base" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
                       <circle cx="35" cy="50" r="15"/>
                       <circle cx="65" cy="50" r="15"/>
@@ -181,38 +185,38 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
                 
                 <motion.div 
                   className="w-3 h-3 bg-verde-musgo-base rounded-full relative z-10 border-2 border-amber-50"
-                  variants={fadeInUp}
+                  
                 />
                 
-                <div className="w-1/2 pl-8">
-                  <div className="text-2xl font-bold  mb-1">8.00 P.M.</div>
-                  <div className="text-lg font-semibold ">Ceremonia</div>
-                  <div className="text-lg font-semibold ">civil</div>
-                </div>
+                <motion.div className="w-1/2 pl-8" {...showUpFunction(0, 0.8)}>
+                  <div className="text-2xl text-center font-bold  mb-1">8.00 p.m.</div>
+                  <div className="text-lg text-center font-semibold ">Ceremonia</div>
+                  <div className="text-lg text-center font-semibold ">civil</div>
+                </motion.div>
               </motion.div>
               
               {/* Reception */}
               <motion.div 
                 className="flex items-center"
-                variants={fadeInUp}
+                
               >
-                <div className="w-1/2 pr-8 text-right">
-                  <div className="text-2xl font-bold 0 mb-1">9.00 P.M.</div>
-                  <div className="text-lg font-semibold ">Recepción</div>
-                </div>
+                <motion.div className="w-1/2 pr-8 text-right" {...showUpFunction(0, 0.8)}>
+                  <div className="text-2xl text-center font-bold 0 mb-1">9.00 p.m.</div>
+                  <div className="text-lg text-center font-semibold ">Recepción</div>
+                </motion.div>
                 
                 <motion.div 
                   className="w-3 h-3 bg-verde-musgo-base rounded-full relative z-10 border-2 border-amber-50"
-                  variants={fadeInUp}
+                  
                 />
                 
                 <div className="w-1/2 pl-8">
                   {/* Dinner plate icon */}
                   <motion.div 
                     className="flex justify-start mb-2"
-                    variants={fadeInUp}
+                    
                   >
-                    <img src={platos} className="w-25 h-15 text-verde-musgo-base" alt="platos" />
+                    <motion.img src={platos} className="w-25 h-15 text-verde-musgo-base" alt="platos" {...showUpFunction(0, 0.8)}/>
                     {/* <svg className="w-12 h-12 text-verde-musgo-base" viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
                       <circle cx="50" cy="50" r="20"/>
                       <circle cx="50" cy="50" r="15"/>
@@ -251,7 +255,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         {/* Decorative floral elements */}
         <motion.div 
           className="florar-elements absolute top-16 left-4 w-16 h-16 opacity-20"
-          variants={fadeInUp}
+          
         >
           <svg viewBox="0 0 100 100" className="w-full h-full text-verde-musgo-base">
             <path d="M50 20 Q70 30 60 50 Q40 60 30 40 Q40 20 50 20" 
@@ -263,7 +267,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         
         <motion.div 
           className="absolute top-32 right-4 w-20 h-20 opacity-20"
-          variants={fadeInUp}
+          
         >
           <svg viewBox="0 0 100 100" className="w-full h-full text-verde-musgo-base">
             <path d="M50 10 Q80 20 70 50 Q40 60 20 40 Q30 10 50 10" 
@@ -275,7 +279,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         
         <motion.div 
           className="absolute bottom-16 left-4 w-24 h-24 opacity-20"
-          variants={fadeInUp}
+          
         >
           <svg viewBox="0 0 100 100" className="w-full h-full text-verde-musgo-base">
             <path d="M50 5 Q85 15 75 50 Q40 70 15 45 Q25 5 50 5" 
@@ -287,7 +291,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
         
         <motion.div 
           className="absolute bottom-32 right-4 w-18 h-18 opacity-20"
-          variants={fadeInUp}
+          
         >
           <svg viewBox="0 0 100 100" className="w-full h-full text-verde-musgo-base">
             <path d="M50 15 Q75 25 65 50 Q35 65 25 40 Q35 15 50 15" 
@@ -295,7 +299,7 @@ const WeddingItinerary = ({ variants: fadeInUp }) => {
           </svg>
         </motion.div>
         
-      </div>
+      </motion.div>
     </motion.section>
   );
 };

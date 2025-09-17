@@ -39,7 +39,8 @@ const Rsvp = ( {fadeInUp} ) => {
             <div className="space-y-4">
             {/* <p className="text-lg xl:text-2xl">Wedding Planner</p> */}
             {/* <p className="text-white/90">Lugares Asignados: 2 Lugares</p> */}
-            <p className="text-marfil-base body-size">Confirma tu asistencia antes del día 18 | 10 | 2025</p>
+            <p className="text-marfil-base body-size">Confirma tu asistencia antes del día </p>
+            <p className="text-marfil-base body-size">18 | 10 | 2025 </p>
             <motion.button
                 
                 className="px-8 py-4 text-verde-musgo-base font-bold rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 mt-6"
