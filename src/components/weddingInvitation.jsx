@@ -8,7 +8,7 @@ import caballitoMarMusic from "../assets/music/Caballito de mar - Rodrigo Rojas 
 import music from "../assets/music/mi-corazon-encantado.mp3";
 import Bubbles from "./animation/Bubbles";
 import data from "../assets/data/invitaciones.json";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 
 const targetDate = new Date("2025-11-22T18:00:00");
@@ -24,7 +24,8 @@ export default function WeddingInvitation({pases}) {
   const [showBubbles, setShowBubbles] = useState(false);
   const [showWeddingDetail, setShowWeddingDetail] = useState(false);
 
-  const { id } = useParams();
+  const [searchParams] = useSearchParams();
+  const id = searchParams.get("id");
   const invitado = data.find((item) => item.ID === parseInt(id));
 
   useEffect(() => {

@@ -1,17 +1,18 @@
 import './App.css'
 import WeddingInvitation from './components/weddingInvitation'
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
-
-
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
-        <Route path="/invitacion" element={<WeddingInvitation pases={0} />} />
-        <Route path="/invitacion/:id" element={<WeddingInvitation />} />
+         {/* Ruta principal: invitación sin pases o con query param ?id= */}
+        <Route path="/invitacion" element={<WeddingInvitation />} />
+
+        {/* Cualquier otra ruta redirige al inicio */}
+        <Route path="*" element={<Navigate to="/invitacion" replace />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

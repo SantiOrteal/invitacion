@@ -19,7 +19,11 @@ export default defineConfig({
     // Increase performance for local development
     hmr: {
       overlay: false // Disable error overlay that can cause lag
-    }
+    },
+    fs: {
+      strict: false // Enable strict file serving
+    },
+    historyApiFallback: true, // Enable history API fallback
   },
   plugins: [react({
       // Disable React Fast Refresh during animation development
