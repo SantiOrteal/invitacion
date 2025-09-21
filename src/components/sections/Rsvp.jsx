@@ -1,15 +1,16 @@
 import { motion } from "framer-motion";
 import { Users } from "lucide-react";
 
-const Rsvp = ( {fadeInUp} ) => {
+const Rsvp = ( {fadeInUp ,invitado} ) => {
 
     const whatsappLink = `https://wa.me/5218446599353?text=${encodeURIComponent(
-        "Confirmar asistencia de [tu nombre]"
+        `Confirmar asistencia de ${invitado ? invitado.RotuloInvitacion : '[Nombre del invitado]'}`
     )}`;
 
   return (
     <motion.section 
         className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 text-marfil-base bg-textura min-h-[500px] flex items-center justify-center"
+        id="confirmacion"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"
@@ -39,6 +40,13 @@ const Rsvp = ( {fadeInUp} ) => {
             <div className="space-y-4">
             {/* <p className="text-lg xl:text-2xl">Wedding Planner</p> */}
             {/* <p className="text-white/90">Lugares Asignados: 2 Lugares</p> */}
+            {invitado  && (
+                <>
+                    <p className="text-marfil-base body-size">{invitado.RotuloInvitacion} </p>
+                    <p className="text-marfil-base body-size">Lugares Asignados: {invitado.Adultos} </p>
+                </>
+            )}
+            
             <p className="text-marfil-base body-size">Confirma tu asistencia antes del día </p>
             <p className="text-marfil-base body-size">18 | 10 | 2025 </p>
             <motion.button

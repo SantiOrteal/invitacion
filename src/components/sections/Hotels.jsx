@@ -123,6 +123,7 @@ const Hotels = ({ fadeInUp }) => {
   return (
     <motion.section
       className="py-16 bg-gradient-to-t from-verde-musgo-base to-verde-musgo-iluminado-1 bg-textura"
+      id="hoteles"
       variants={fadeInUp}
       initial="initial"
       whileInView="animate"

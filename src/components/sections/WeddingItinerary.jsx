@@ -18,6 +18,7 @@ const WeddingItinerary = ({ fadeInUp }) => {
   return (
     <motion.section 
       className="min-h-[700px] bg-marfil-iluminado-1 bg-old-letter flex flex-col justify-center items-center "
+      id='itinerario'
     >
       <motion.div className="max-w-md w-5/6 relative text-verde-musgo-iluminado-1 mb-10 ">
         {/* Background decorative elements */} 

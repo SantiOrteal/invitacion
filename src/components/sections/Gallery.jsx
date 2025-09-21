@@ -105,6 +105,7 @@ const Gallery = ({ fadeInUp, staggerChildren }) => {
       <motion.section 
         className="py-16 bg-marfil-iluminado-1 bg-old-letter"
         variants={fadeInUp}
+        id="galeria"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, margin: "-100px" }}

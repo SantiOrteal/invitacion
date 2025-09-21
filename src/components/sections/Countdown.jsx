@@ -5,6 +5,7 @@ const Countdown = ( { timeLeft, fadeInUp, staggerChildren } ) => {
   return (
      <motion.section 
               className="py-32 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base bg-textura min-h-[400px]"
+              id="faltan"
               variants={fadeInUp}
               initial="initial"
               whileInView="animate"

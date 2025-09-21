@@ -34,6 +34,7 @@ const Gifts = ( {fadeInUp, staggerChildren} ) => {
     <>
       <motion.section 
           className="py-16 bg-marfil-iluminado-1 bg-old-letter min-h-110 flex justify-center items-center relative"
+          id="regalos"
           variants={fadeInUp}
           initial="initial"
           whileInView="animate"

@@ -5,6 +5,7 @@ const Hashtag = ( {fadeInUp} ) => {
   return (
     <motion.section 
         className="py-16 bg-white bg-marfil-iluminado-1 bg-old-letter relative min-h-[500px] flex items-center justify-center"
+        id="hashtag"
         variants={fadeInUp}
         initial="initial"
         whileInView="animate"

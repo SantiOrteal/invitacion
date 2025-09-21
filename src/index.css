@@ -491,3 +491,7 @@ body {
   user-select: none;
   touch-action: manipulation;
 }
+
+html {
+  scroll-behavior: smooth;
+}

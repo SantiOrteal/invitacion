@@ -10,6 +10,7 @@ const StoryTelling = ({ variants: fadeInUp }) => {
   return (
     <motion.section 
       className="min-h-[700px] bg-marfil-iluminado-1 bg-old-letter flex flex-col justify-center items-center "
+      id='frase'
       initial="hidden"
       animate="visible"
       variants={{

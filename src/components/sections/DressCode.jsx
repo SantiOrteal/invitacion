@@ -6,6 +6,7 @@ const DressCode = ({ fadeInUp }) => {
     <motion.section 
       className="py-16 bg-gradient-to-t from-verde-musgo-oscuro-2 to-verde-musgo-base bg-textura min-h-[600px]"
       variants={fadeInUp}
+      id="detalles-del-evento"
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}

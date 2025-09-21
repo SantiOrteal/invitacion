@@ -12,9 +12,10 @@ import Gifts from "./sections/Gifts";
 import Rsvp from "./sections/Rsvp";
 import Hashtag from "./sections/Hashtag";
 import WeddingItinerary from "./sections/WeddingItinerary";
+import HamburgerMenu from "./utils/hamburgerMenu";
 
 
-const WeddingDetail = ({ timeLeft, audioRef }) => {
+const WeddingDetail = ({ timeLeft, audioRef, invitado }) => {
   const [isMuted, setIsMuted] = useState(false);
 
   const toggleMute = () => {
@@ -48,10 +49,14 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
         Your browser does not support the audio element.
       </audio> */}
 
+      {/* Hamburger Menu */}
+
+      <HamburgerMenu />
+
       {/* Sticky Mute Button */}
       <motion.button
         onClick={toggleMute}
-        className="bg-white fixed top-6 right-6 z-50 bg-marfil-iluminad-2 backdrop-blur-sm border outline-none rounded-full p-3 
+        className="fixed top-6 right-6 z-50 bg-marfil-iluminado-2 backdrop-blur-sm border outline-none rounded-full p-3 
         shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -99,7 +104,7 @@ const WeddingDetail = ({ timeLeft, audioRef }) => {
         <Gifts fadeInUp={fadeInUp} staggerChildren={staggerChildren}  />
 
         {/* RSVP Section */}
-        <Rsvp fadeInUp={fadeInUp} />
+        <Rsvp fadeInUp={fadeInUp} invitado={invitado} />
 
         {/* Hashtag Section */}
         <Hashtag fadeInUp={fadeInUp} />

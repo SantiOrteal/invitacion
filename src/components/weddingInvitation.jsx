@@ -7,6 +7,8 @@ import SvgAnimation from "./animation/svgAnimation";
 import caballitoMarMusic from "../assets/music/Caballito de mar - Rodrigo Rojas & Lazcano Malo.mp3";
 import music from "../assets/music/mi-corazon-encantado.mp3";
 import Bubbles from "./animation/Bubbles";
+import data from "../assets/data/invitaciones.json";
+import { useParams } from "react-router-dom";
 
 
 const targetDate = new Date("2025-11-22T18:00:00");
@@ -14,13 +16,16 @@ const targetDate = new Date("2025-11-22T18:00:00");
 // 2. Add reduced motion support for accessibility and performance
 // const shouldReduceMotion = useReducedMotion();
 
-export default function WeddingInvitation() {
+export default function WeddingInvitation({pases}) {
   const audioRef = useRef(null);
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [showInvitation, setShowInvitation] = useState(false);
   const [startAudio, setStartAudio] = useState(false);
   const [showBubbles, setShowBubbles] = useState(false);
   const [showWeddingDetail, setShowWeddingDetail] = useState(false);
+
+  const { id } = useParams();
+  const invitado = data.find((item) => item.ID === parseInt(id));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -151,7 +156,7 @@ export default function WeddingInvitation() {
       
         {showInvitation  && (
           <AnimatePresence  mode="wait">
-          <WeedingDetail timeLeft={timeLeft} audioRef={audioRef} />
+          <WeedingDetail timeLeft={timeLeft} audioRef={audioRef} invitado={invitado} />
           </AnimatePresence>
         )}
       
