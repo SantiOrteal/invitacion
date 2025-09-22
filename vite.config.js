@@ -43,7 +43,7 @@ export default defineConfig({
       force: true
   },
   build: {
-      outDir: 'dist/invitacion',
+      outDir: 'dist',
       emptyOutDir: true,
       rollupOptions: {
       output: {
