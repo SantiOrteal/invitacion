@@ -1,2 +1,3 @@
 /invitacion/*    /invitacion/index.html    200
 /                /invitacion               301
+/invitacion/assets/*   /invitacion/assets/:splat   200
