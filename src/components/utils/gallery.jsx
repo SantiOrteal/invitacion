@@ -1,12 +1,12 @@
-import img1 from "../../assets/images/ps-back.jpg";
-import img2 from "../../assets/images/ps-bridge.jpg";
-import img3 from "../../assets/images/ps-duck.jpg";
-import img4 from "../../assets/images/ps-gaviota.jpg";
-import img5 from "../../assets/images/ps-hands.jpg";
-import img6 from "../../assets/images/ps-lay.jpg";
-import img7 from "../../assets/images/ps-picnick.jpg";
-import img8 from "../../assets/images/ps-roll.jpg";
-import img9 from "../../assets/images/ps-wide.jpg";
+import img1 from "@/assets/images/ps-back.jpg";
+import img2 from "@/assets/images/ps-bridge.jpg";
+import img3 from "@/assets/images/ps-duck.jpg";
+import img4 from "@/assets/images/ps-gaviota.jpg";
+import img5 from "@/assets/images/ps-hands.jpg";
+import img6 from "@/assets/images/ps-lay.jpg";
+import img7 from "@/assets/images/ps-picnick.jpg";
+import img8 from "@/assets/images/ps-roll.jpg";
+import img9 from "@/assets/images/ps-wide.jpg";
 
 const gallery = [
         { src: img1, alt: "Galería 1" },
