@@ -43,6 +43,11 @@ export default defineConfig({
       force: true
   },
   build: {
+    build: {
+      outDir: 'dist/invitacion',
+      emptyOutDir: true,
+      sourcemap: true,
+    },
     rollupOptions: {
       output: {
         manualChunks: {
