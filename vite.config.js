@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/invitacion/', // ← importante si no es tu dominio principal
+  base: '/', // ← importante si no es tu dominio principal
   server: {
     watch: {
       usePolling: true, // Utiliza "polling" para detectar cambios en algunos entornos
