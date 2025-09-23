@@ -1,0 +1,4 @@
+# Solo redirige las rutas de navegación, no los archivos
+!/assets/*
+/*!*.*
+/* /index.html 200
