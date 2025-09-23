@@ -1,5 +1,0 @@
-/invitacion/assets/*    /invitacion/assets/:splat   200
-/invitacion/*.(js|css|png|jpg|jpeg|gif|svg|mp3)    /invitacion/:splat   200
-/    /invitacion   301
-/invitacion        /invitacion/index.html   200
-/invitacion/*      /invitacion/index.html   200
