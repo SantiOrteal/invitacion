@@ -1,4 +1,6 @@
-# Solo redirige las rutas de navegación, no los archivos
-!/assets/*
-/*!*.*
+# Permitir que todos los assets se sirvan directamente
+/assets/* 200
+/invitacion/assets/* 200
+
+# Solo redirigir rutas que no son archivos estáticos al SPA
 /* /index.html 200
